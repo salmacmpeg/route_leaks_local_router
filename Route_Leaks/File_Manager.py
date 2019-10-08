@@ -70,7 +70,14 @@ def extracter ( file_names_gz , read_only ):
 #this function returns a file name for the features saving file,it doesn't create it, if a number is out of scope , then it return empty string
 def get_saving_features_file_name(f):
     if f< len(folders_extentions):
-        return folders_extentions[f]["parent_dir"]+folders_extentions[f]["folder"]+"/features"+str(f)+".csv"
+        return folders_extentions[f]["parent_dir"]+folders_extentions[f]["folder"]+"/featuressssss"+str(f)+".csv"
+    else:
+        print("No such folder exists!")
+        return ""
+#this function returns a file name for the features saving file,it doesn't create it, if a number is out of scope , then it return empty string
+def get_saving_features_file_name_old(f):
+    if f< len(folders_extentions):
+        return folders_extentions[f]["parent_dir"]+folders_extentions[f]["folder"]+"/features.csv"
     else:
         print("No such folder exists!")
         return ""
@@ -83,3 +90,8 @@ def init_files(f,read_only):
     feature_file_name=get_saving_features_file_name(f)
     return files_names,feature_file_name
 
+def get_all_feature_files():
+    all_features=[]
+    for item in folders_extentions:
+        all_features.append(get_saving_features_file_name_old(item["num"]) )
+    return all_features

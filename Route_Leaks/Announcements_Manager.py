@@ -167,11 +167,11 @@ import csv
 def findsource(file_name2,more_specific,new_prefixes,origins_new_prefixes,peers_new_prefixes,origins_more_specific_prefixes,peers_more_specific_prefixes,AS_path_new_prefixes,AS_path_more_specific_prefixes):
     if len(more_specific)>0:
         counter1=collections.Counter(origins_more_specific_prefixes)
-        print(counter1.most_common(1))
+        #print(counter1.most_common(1))
         counter2=collections.Counter(peers_more_specific_prefixes)
-        print(counter2.most_common(1))
+        #print(counter2.most_common(1))
         counter3=collections.Counter(tuple(item) for item in AS_path_more_specific_prefixes)
-        print(counter3.most_common(1))
+        #print(counter3.most_common(1))
         file_name=file_name2.replace(".txt","more_specific.csv")
         with open(file_name, "w",newline='') as f:
             w = csv.writer(f)
@@ -199,11 +199,11 @@ def findsource(file_name2,more_specific,new_prefixes,origins_new_prefixes,peers_
 
     if len(new_prefixes)>0:
         counter4=collections.Counter(origins_new_prefixes)
-        print(counter4.most_common(1))
+        #print(counter4.most_common(1))
         counter5=collections.Counter(peers_new_prefixes)
-        print(counter5.most_common(1))
+        #print(counter5.most_common(1))
         counter6=collections.Counter(tuple(item) for item in AS_path_new_prefixes)
-        print(counter6.most_common(1))
+        #print(counter6.most_common(1))
         file_name=file_name2.replace(".txt","new_prefixes.csv")
         with open(file_name, "w",newline='') as f:
             w = csv.writer(f)
