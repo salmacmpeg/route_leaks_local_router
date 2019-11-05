@@ -19,8 +19,8 @@ folders_extentions.append({"num":11,"parent_dir":parent_dir,"folder":"volumedriv
 folders_extentions.append({"num":12,"parent_dir":parent_dir,"folder":"china8april2010from1550to1610/rrcc13","extension":ripe})
 folders_extentions.append({"num":13,"parent_dir":parent_dir,"folder":"china8april2010from1550to1610/rrcc11","extension":ripe})
 folders_extentions.append({"num":14,"parent_dir":parent_dir,"folder":"Brazil21oct2017from1100to1117/rrcc15","extension":ripe})
-folders_extentions.append({"num":15,"parent_dir":parent_dir,"folder":"Brazil21oct2017from1100to1117/routeviews-saopaolo1/temp","extension":route_views})
-folders_extentions.append({"num":16,"parent_dir":parent_dir,"folder":"barazil11nov2008from155to215/rrcc1","extension":ripe})
+folders_extentions.append({"num":15,"parent_dir":parent_dir,"folder":"Brazil21oct2017from1100to1117/routeviews-saopaolo1","extension":route_views})
+folders_extentions.append({"num":16,"parent_dir":parent_dir,"folder":"barazil11nov2008from155to215/rrcc15","extension":ripe})
 
 #-----------------------------------------------------------------------------------#
 #this function returns a full folder name given a number in the list, if a number is out of scope , then it return empty string
