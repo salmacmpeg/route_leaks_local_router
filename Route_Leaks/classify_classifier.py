@@ -28,10 +28,13 @@ def decisiontreec(): #acc= 84%
     clf = tree.DecisionTreeClassifier()
     return clf
 #this function classify the data and returns the predicate
-def classify(x_train,y_train,xtest):
-    #clf=randomforestc()
-    #clf=svmc()
-    clf=decisiontreec()
+def classify(x_train,y_train,xtest,choice):
+    if choice==1:
+        clf=randomforestc()
+    elif choice==2:
+        clf=svmc()
+    else:
+        clf=decisiontreec()
     clf.fit(x_train, y_train)
     y_predic=clf.predict(xtest)
     return y_predic

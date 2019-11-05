@@ -70,7 +70,7 @@ def extracter ( file_names_gz , read_only ):
 #this function returns a file name for the features saving file,it doesn't create it, if a number is out of scope , then it return empty string
 def get_saving_features_file_name(f):
     if f< len(folders_extentions):
-        return folders_extentions[f]["parent_dir"]+folders_extentions[f]["folder"]+"/featuressssss"+str(f)+".csv"
+        return folders_extentions[f]["parent_dir"]+folders_extentions[f]["folder"]+"/featuresn"+str(f)+".csv"
     else:
         print("No such folder exists!")
         return ""

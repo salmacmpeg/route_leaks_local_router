@@ -6,7 +6,7 @@ from Alarms import *
 from Announcements_Manager import *
 from Radix_Tree_Manager import *
 from Features_Printer import *
-
+import time
 import socket
 import winsound
 from socket import (getaddrinfo, gaierror,
@@ -14,8 +14,10 @@ from socket import (getaddrinfo, gaierror,
                     AI_NUMERICHOST,inet_ntoa)
 
 def main():
+
     folder_num= int(input("Enter folder number" ))
     overwrite=int(input("Enter 0 for overwrite , 1 to read only"))
+    start_time = time.time()
     file_names,feaure_file=init_files(folder_num,overwrite)
     alarm("short")
     Dict=[]
@@ -37,6 +39,7 @@ def main():
     alarm("short")
     print_Dict(Dict,feaure_file)
     printstats(Dict,get_folder_name_without_extension(folder_num))
+    print("--- %s seconds ---" % (time.time() - start_time))
     print("end")
     alarm("short")
 
